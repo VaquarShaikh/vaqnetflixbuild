@@ -37,7 +37,7 @@ function Row({title , movies}:Props) {
 
 
   return (
-    <div className="h-40 space-y-0.5 md:space-y-2">
+    <div className="h-40 space-y-0.5 md:space-y-2 lg:space-y-0">
         <h2 className="w-56 cursor-pointer text-sm font-semibold text-[#e5e5e5] transition
         duration-200 hover:text-white md:text-2xl">{title}</h2>
         <div className="group relative md:-ml-2">
@@ -45,7 +45,7 @@ function Row({title , movies}:Props) {
             cursor-pointer opacity-0 transition hover:scale-125 group-hover:opacity-100 ${!isMoved && "hidden"}`} onClick={() => handleClick("left")} />
 
 
-            <div ref={rowRef} className="flex items-center scrollbar-hide space-x-0.5 overflow-x-scroll md:space-x-2.5
+            <div ref={rowRef} className="flex items-center space-x-0.5 scrollbar-hide overflow-x-scroll md:space-x-2.5
             md:p-2">
                 {/* Thumbnail */}
                 {movies.map((movie) => (
